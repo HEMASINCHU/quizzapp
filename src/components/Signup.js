@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [login, setLogin] = useState({ password: "", email: "", username: "" });
 
   function handleChange(e) {
@@ -57,8 +58,9 @@ const Signup = () => {
         <button className="form-button login" type="submit">
           SignUp
         </button>
-        <button className="form-button register">
-          <Link to="/">login</Link>
+
+        <button className="form-button register" onClick={() => navigate("/")}>
+          Login
         </button>
       </form>
     </div>

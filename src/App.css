@@ -66,3 +66,16 @@ a.activecomp {
   border-radius: 10px;
   font-weight: bold;
 }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.cardlist {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgb(173, 239, 208);
+  border-radius: 10px;
+  padding: 2rem;
+}

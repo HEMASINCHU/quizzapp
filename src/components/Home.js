@@ -1,4 +1,9 @@
+import Cards from "../card/Cards";
 const Home = () => {
-  return "Home page";
+  return (
+    <>
+      <Cards />
+    </>
+  );
 };
 export default Home;
