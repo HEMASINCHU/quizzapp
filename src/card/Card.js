@@ -2,7 +2,7 @@ import { useState } from "react";
 const Card = (props) => {
   console.log(props);
   const { title, description } = props.data;
-  const [colors] = useState(["#eb4934", "#5e5c0d", "#30b828", "#163bcc"]);
+  const [colors] = useState(["#00ffff", "#ff0080", "#bf00ff", "#80ff00"]);
 
   const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * (colors.length - 1 - 0) + 0);
@@ -10,9 +10,14 @@ const Card = (props) => {
   };
 
   return (
-    <div className="cardlist" style={{ backgroundColor: getRandomColor() }}>
+    <div
+      className="cardlist"
+      style={{ backgroundColor: getRandomColor(), maxWidth: "300px" }}
+    >
       <div>
-        <h1 style={{ textTransform: "uppercase" }}>{title}</h1>
+        <h1 style={{ textTransform: "uppercase", letterSpacing: "2px" }}>
+          {title}
+        </h1>
         <p>{description}</p>
         <button
           style={{

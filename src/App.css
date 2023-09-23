@@ -67,7 +67,6 @@ a.activecomp {
   font-weight: bold;
 }
 .cards {
-  max-width: 300px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
