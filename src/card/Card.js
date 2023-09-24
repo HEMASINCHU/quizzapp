@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Card = (props) => {
+  const navigate = useNavigate();
   console.log(props);
   const { title, description } = props.data;
   const [colors] = useState(["#00ffff", "#ff0080", "#bf00ff", "#80ff00"]);
@@ -29,6 +32,7 @@ const Card = (props) => {
             fontWeight: "bold",
             border: "none",
           }}
+          onClick={() => navigate("quizz-instruction")}
         >
           Start-Quizz
         </button>

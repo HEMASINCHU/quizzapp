@@ -4,9 +4,9 @@ const Home = () => {
   return (
     <>
       <Cards />
-      <Link className="nav-link" to="quizz">
-        Quizz works
-      </Link>
+      {/* <Link className="nav-link" to="quizz-instruction">
+        QuizzInstruction
+      </Link> */}
       <br />
       <Outlet />
     </>
