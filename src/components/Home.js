@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <>
       {Id}
+      <Cards />
       <br />
       <Outlet />
     </>
