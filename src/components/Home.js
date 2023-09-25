@@ -7,7 +7,6 @@ const Home = () => {
     <>
       {Id}
       <Cards />
-      <br />
       <Outlet />
     </>
   );
