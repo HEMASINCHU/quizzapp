@@ -166,3 +166,24 @@ input[type="radio"] {
 .result-container button:hover {
   background-color: #0056b3;
 }
+.quiz-instruction-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.quiz-instruction-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.quiz-instruction-list {
+  text-align: left;
+  margin-left: 20px;
+  list-style: decimal;
+}
+
+.quiz-instruction-button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 10px 20px 5px;
+}

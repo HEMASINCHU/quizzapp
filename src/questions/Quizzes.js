@@ -25,7 +25,6 @@ const Quiz = () => {
       options: ["Javascript", "MongoDB", "React", "Typescript"],
       correctAnswerIndex: 0,
     },
-    // Add a fourth question
     {
       question: "What is JSX?",
       options: [
@@ -40,7 +39,13 @@ const Quiz = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [submitted, setSubmitted] = useState(false);
-  const [totalScore, setTotalScore] = useState(0);
+  const [userAnswers, setUserAnswers] = useState(
+    Array(questions.length).fill("")
+  );
+  const totalScore = userAnswers.filter(
+    (answer, index) =>
+      answer === questions[index].options[questions[index].correctAnswerIndex]
+  ).length;
 
   const handleNext = () => {
     if (currentQuestion < questions.length - 1) {
@@ -55,18 +60,13 @@ const Quiz = () => {
   };
 
   const handleAnswer = (selectedOption) => {
-    const isCorrect =
-      questions[currentQuestion].correctAnswerIndex ===
-      questions[currentQuestion].options.indexOf(selectedOption);
+    setUserAnswers((prevAnswers) => {
+      const updatedAnswers = [...prevAnswers];
+      updatedAnswers[currentQuestion] = selectedOption;
+      return updatedAnswers;
+    });
 
-    if (currentQuestion === questions.length - 1) {
-      if (isCorrect) {
-        setTotalScore((prevScore) => prevScore + 1);
-      }
-      setSubmitted(true);
-    } else {
-      handleNext();
-    }
+    handleNext();
   };
 
   const handleSubmit = () => {

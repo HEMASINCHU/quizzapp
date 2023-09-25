@@ -30,4 +30,5 @@ const Question = ({ questionData }) => {
     </div>
   );
 };
+
 export default Question;
