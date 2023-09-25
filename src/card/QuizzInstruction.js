@@ -1,12 +1,21 @@
 import { useNavigate } from "react-router-dom";
+import React from "react";
+
 const QuizzInstruction = () => {
   const navigate = useNavigate();
+
+  const buttonStyle = {
+    padding: "5px 10px",
+    borderRadius: "10px",
+    margin: "10px",
+  };
+
   return (
-    <>
-      <ol>
-        <h4>List of Quizz Instructions</h4>
+    <div className="quiz-instruction-container">
+      <h4 className="quiz-instruction-title">List of Quizz Instructions</h4>
+      <ol className="quiz-instruction-list">
         <li>
-          The quizzes consists of questions carefully designed to help you
+          The quizzes consist of questions carefully designed to help you
           self-assess your comprehension of the information presented on the
           topics covered in the module.{" "}
         </li>
@@ -16,7 +25,7 @@ const QuizzInstruction = () => {
         </li>
         <li>
           After responding to a question, click on the "Next Question" button at
-          the bottom to go to the next questino.{" "}
+          the bottom to go to the next question.{" "}
         </li>
         <li>
           If you select an incorrect response for a question, you can try again
@@ -27,19 +36,13 @@ const QuizzInstruction = () => {
           questions.
         </li>
       </ol>
-      <input type="checkbox" /> I agree Terms and conditions
+      <input type="checkbox" /> I agree to Terms and Conditions
       <br />
-      <button
-        style={{
-          padding: "5px 10px",
-          borderRadius: "10px",
-          margin: "10px 20px 5px",
-        }}
-        onClick={() => navigate("/quizzes")}
-      >
+      <button style={buttonStyle} onClick={() => navigate("/quizzes")}>
         Start
       </button>
-    </>
+    </div>
   );
 };
+
 export default QuizzInstruction;

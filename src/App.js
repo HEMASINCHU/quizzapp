@@ -5,8 +5,9 @@ import Home from "./components/Home";
 import NavBar from "./navbar/Navbar";
 import Cards from "./card/Cards";
 import QuizzInstruction from "./card/QuizzInstruction";
-import "./App.css";
 import Quizzes from "./questions/Quizzes";
+
+import "./App.css";
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
         <Route path="signup" element={<Signup />} />
         <Route path="home/:id" element={<Home />}>
           <Route path="cards/:userId" element={<Cards />} />
-          <Route path="quizz-instruction" element={<QuizzInstruction />} />
         </Route>
+        <Route path="quizz-instruction" element={<QuizzInstruction />} />
         <Route path="quizzes" element={<Quizzes />} />
       </Routes>
     </div>
