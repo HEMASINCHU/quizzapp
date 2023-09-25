@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Card = (props) => {
   const navigate = useNavigate();
+  const { userId } = useParams();
   console.log(props);
   const { title, description } = props.data;
   const [colors] = useState(["#00ffff", "#ff0080", "#bf00ff", "#80ff00"]);
@@ -22,6 +23,7 @@ const Card = (props) => {
           {title}
         </h1>
         <p>{description}</p>
+        <p> {userId}</p>
         <button
           style={{
             padding: "10px",
