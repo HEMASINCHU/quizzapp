@@ -6,11 +6,7 @@ const Home = () => {
   return (
     <>
       {Id}
-
       <Cards />
-      {/* <Link className="nav-link" to="quizz-instruction">
-        QuizzInstruction
-      </Link> */}
       <br />
       <Outlet />
     </>
