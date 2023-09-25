@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: rgb(0, 0, 255);
+}
+.login-form {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.form-label {
+  display: flex;
+  margin-bottom: 10px;
+}
+.form-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.form-button {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.login {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+.register {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(200, 195, 190);
+}
+.register a {
+  text-decoration: none;
+}
+.navbar {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  background-color: rgb(175, 215, 225);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+a.activecomp {
+  background-color: rgb(0, 255, 136);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.cardlist {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgb(173, 239, 208);
+  border-radius: 10px;
+  padding: 2rem;
+}
