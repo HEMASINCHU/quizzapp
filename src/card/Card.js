@@ -34,7 +34,7 @@ const Card = (props) => {
             fontWeight: "bold",
             border: "none",
           }}
-          onClick={() => navigate("quizz-instruction")}
+          onClick={() => navigate("/quizz-instruction")}
         >
           Start-Quizz
         </button>
