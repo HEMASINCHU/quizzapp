@@ -181,9 +181,3 @@ input[type="radio"] {
   margin-left: 20px;
   list-style: decimal;
 }
-
-.quiz-instruction-button {
-  padding: 5px 10px;
-  border-radius: 10px;
-  margin: 10px 20px 5px;
-}

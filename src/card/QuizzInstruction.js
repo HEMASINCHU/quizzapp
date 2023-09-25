@@ -7,7 +7,7 @@ const QuizzInstruction = () => {
   const buttonStyle = {
     padding: "5px 10px",
     borderRadius: "10px",
-    margin: "10px 20px 5px",
+    margin: "10px",
   };
 
   return (
@@ -38,11 +38,7 @@ const QuizzInstruction = () => {
       </ol>
       <input type="checkbox" /> I agree to Terms and Conditions
       <br />
-      <button
-        className="quiz-instruction-button"
-        style={buttonStyle}
-        onClick={() => navigate("/quizzes")}
-      >
+      <button style={buttonStyle} onClick={() => navigate("/quizzes")}>
         Start
       </button>
     </div>
