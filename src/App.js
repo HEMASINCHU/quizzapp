@@ -5,9 +5,9 @@ import Home from "./components/Home";
 import NavBar from "./navbar/Navbar";
 import Cards from "./card/Cards";
 import QuizzInstruction from "./card/QuizzInstruction";
-import Quizzes from "./questions/Quizzes";
 
 import "./App.css";
+import Quizzes from "./questions/Quizzes";
 
 function App() {
   return (

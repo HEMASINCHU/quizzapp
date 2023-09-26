@@ -1,20 +1,16 @@
 import React from "react";
 
-const Result = ({ onPrevious, onNext, isFirstQuestion, isLastQuestion }) => {
+function QuizzResult({ score, totalScore, tryAgain }) {
   return (
-    <div className="result-container">
-      <button
-        onClick={onPrevious}
-        disabled={isFirstQuestion}
-        className={isFirstQuestion ? "disabled-button" : ""}
-      >
-        Previous
+    <>
+      <div className="show-score">
+        Your Score:{score}/ {totalScore}
+      </div>
+      <button id="next-button" onClick={tryAgain}>
+        Try Again
       </button>
-      <button onClick={onNext} disabled={isLastQuestion}>
-        Next
-      </button>
-    </div>
+    </>
   );
-};
+}
 
-export default Result;
+export default QuizzResult;
